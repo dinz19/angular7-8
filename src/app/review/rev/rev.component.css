@@ -1,0 +1,28 @@
+
+
+.title{
+    background-color: coral;
+    height:50px;
+    text-align: center;
+}
+
+
+.thumb{
+    background-color: darkgreen;
+    float:left;
+    width:133px;
+    height:100px;
+    text-align: center;
+    color: aliceblue
+}
+
+
+
+.desc{
+    background-color:dodgerblue;
+    float:left;
+    position: relative;
+    width:90%;
+    height:100px;
+    text-align: center;
+}

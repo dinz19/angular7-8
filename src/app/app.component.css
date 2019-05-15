@@ -1,0 +1,13 @@
+h1{
+color: brown;
+}
+#root{
+    color: indigo;
+}
+
+.review{
+    border: solid 1px green;
+    height:150px;
+    background-color: aquamarine;
+    
+}

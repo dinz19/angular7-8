@@ -1,0 +1,154 @@
+Friends: {{ friends }}
+<div>
+  <ul>
+    <li *ngFor="let f of friends; let counter = index">
+      {{f}} **** counter number {{counter}}
+      <button (click)="display(counter, f)"> Click {{f}}</button>
+    </li>
+  </ul>
+
+</div>
+<hr>
+
+<div>
+  <h3>Demo fof *ngFor DIrective with Big Inner JSON Array:</h3>
+  <table border="border">
+    <thead>
+      <tr>
+        <th>
+          Id
+        </th>
+        <th>
+          User Name
+        </th>
+        <th>
+          ZipCode
+        </th>
+        <th>
+          Lattitude
+        </th>
+        <th>
+          Longitude
+        </th>
+        <th>
+          Company Name
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td> {{user.id}}</td>
+        <td> {{user.username}}</td>
+        <td> {{user.address.zipcode}}</td>
+        <td> {{user.address.geo.lat}}</td>
+        <td> {{user.address.geo.lon}}</td>
+        <td> {{user.company.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr>
+<hr>
+
+<div>
+  <h3>Demo fof *ngFor DIrective with JSON Array:</h3>
+  <table border="border">
+    <thead>
+      <tr>
+        <th>
+          S.No
+        </th>
+        <th>
+          City
+        </th>
+        <th>
+          Code
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let loc of locations">
+        <td> {{loc.id}}</td>
+        <td> {{loc.city}}</td>
+        <td> {{loc.code}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr>
+
+<div>
+  Demo of *ngIf Directive<br>
+  <br>
+  <button (click)="toggleDiv()"> Toggle Check</button><br>
+  <div class="box" *ngIf="check">
+
+
+
+  </div>
+
+</div>
+
+<hr>
+
+<div>
+  Demo of *ngIf Directive with else criteria<br>
+  <br>
+  <button (click)="toggleDivElse()"> Toggle Check</button><br>
+  <div class="boxelse" *ngIf="checkElse; else elseTemplate">
+
+    Cur Content
+
+  </div>
+
+
+  <ng-template #elseTemplate>
+    <div class="nobox">
+        New Content
+    </div>
+
+  </ng-template>
+
+</div>
+
+<hr>
+<div>
+  Demo of *ngSwitch Directive <br>
+  <br>
+  
+    <div [ngSwitch]="city">
+      <span *ngSwitchCase="'044'"> 
+        Chennai
+      </span>
+      <span *ngSwitchCase="'080'"> 
+        Bengalaru
+      </span>
+      <span *ngSwitchCase="'010'"> 
+        Delhi 
+      </span>
+      <span *ngSwitchDefault> 
+          City not available
+        </span>
+    </div>
+ </div>
+
+ <hr>
+
+ <div>
+
+  <h3> Demo of Pipes (Built-In)</h3><br><br>
+
+Savings: {{money | currency : 'INR'}} in INR <br>
+Savings: {{money | currency : 'JPY'}} in JPY <br>
+Savings: {{money | currency : 'USD'}} in USD <br>
+<br>
+Chennai : {{name| uppercase}} 
+<br>
+
+<br>
+Day : {{bday| date : 'short'}} 
+<br>
+ </div>
+
+

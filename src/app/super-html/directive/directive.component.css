@@ -1,0 +1,51 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+table{
+    height: 100%;
+    width: 40%;
+}
+th{
+    padding:5px;
+    height:10px;
+    text-align: center;
+    color: brown;
+    background-color: burlywood;
+}
+
+td{
+    padding:15px;
+    text-align: center;
+    color: black;
+    background-color: bisque;
+}
+
+.box{
+    background-color: darkturquoise;
+    width: 100px;
+    height: 100px;
+}
+
+.boxelse{
+    background-color: firebrick;
+    width: 100px;
+    height: 100px;
+    color:white;
+}
+
+
+.nobox{
+    background-color:green;
+    width: 100px;
+    height: 100px;
+    color:wheat
+}
+
+
+.switchCase{
+    background-color:thistle;
+    width: 100px;
+    height: 100px;
+    color:wheat
+}
