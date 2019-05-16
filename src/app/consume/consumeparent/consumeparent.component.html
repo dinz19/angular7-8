@@ -1,0 +1,38 @@
+<div class="parents">
+  I am Consume Parent Component! 
+<br>
+  Value of Parent : {{name}}
+<br>
+<br>
+
+<div class="childs">
+<br>
+<br>
+  I am child:
+<br><br>
+Value of Child  :  {{name}}
+<cts-child [sendName]= "name" (sendToParent) = "receivedNewName($event)"></cts-child>
+
+</div>
+</div>
+<br>
+<br>
+<hr>
+
+<a routerLink="child1">Child1</a> &nbsp;&nbsp;
+<a routerLink="child2">Child2</a> &nbsp;&nbsp;
+<br>
+<br>
+<router-outlet></router-outlet>
+<!--<div>
+  <ol>
+    <li class="child1">
+      I am Child 1 => <cts-consumechild1></cts-consumechild1>
+    </li>
+    <li class="child2">
+      I am Child 2 => <cts-consumechild2></cts-consumechild2>
+    </li>
+  </ol>
+</div>
+
+-->
