@@ -9,7 +9,7 @@ export class ConsumeparentComponent implements OnInit {
  name ="Angular 7"
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
 
   receivedNewName = function(e){

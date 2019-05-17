@@ -1,0 +1,40 @@
+<div>
+  <br>
+  Template Form :
+
+  <br>
+  <br>
+  <form #hobbyForm="ngForm" (ngSubmit)="submitDetail(hobbyForm)" autocomplete >
+    
+    <label contenteditable="true">
+      Name &nbsp;
+    </label>
+    <input type="text"  name="FULLNAME" [(ngModel)]="fullname" minlength="3"  maxlength="10" required autofocus placeholder="Full Name" pattern="[a-zA-z]{3,10}"> {{fullname}}
+&nbsp;
+<span [ngStyle]="{color: hobbyForm.controls.FULLNAME.invalid? 'red' : 'white'}" > Minimum Length is 3. Maximum Length is 10 and only alphabets are allowed</span>
+  <br>
+  <br>
+    <label>
+      Age &nbsp;&nbsp;&nbsp;&nbsp;
+    </label>
+    <input type="number" name="AGE" [(ngModel)]="age" placeholder="Age"  required min="18" max="30"> {{age}}
+  
+  <br>
+  <br>
+    <label>
+      Hobby 
+    </label>
+
+    <select name="HOBBIES" [(ngModel)]="hobby" style="width:170px"> 
+      <option value="hacking">Hacking</option>
+      <option value="driving">Driving</option>
+      <option value="trekking">Trekking</option>
+    </select>
+    {{hobby}}
+  <br>
+  <br>
+  <button type="submit" > Submit </button>
+  </form>
+  <!--[disabled]="hobbyForm.invalid"-->
+
+</div>
