@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,6 +50,7 @@ import { ReactiveformComponent } from './forms/reactiveform/reactiveform.compone
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       /*{
         path: 'emp',
@@ -104,7 +106,7 @@ import { ReactiveformComponent } from './forms/reactiveform/reactiveform.compone
         }
         ]
       },
-      {
+      { 
         path: 'template',
         component: TemplateformComponent
       },

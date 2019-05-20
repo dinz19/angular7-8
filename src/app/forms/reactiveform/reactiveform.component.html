@@ -1,3 +1,39 @@
-<p>
-  reactiveform works!
-</p>
+
+<div>
+  <br>
+  <br>
+ <u> <b>Reactive Forms :</b></u>
+  <br>
+  <br>
+  <hr>
+  <div>
+    <!--<form  #myForm="ngForm">-->
+      
+      <form  [formGroup] = "myForm" (ngSubmit)="submitForm(myForm)">
+
+      <label> Name &nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" formControlName="fn">
+      <br>
+      <br>
+      <label> Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="number" formControlName="score">
+      <br>
+      <br>
+      <label>Hobby&nbsp;&nbsp;&nbsp;</label>
+      <select formControlName="hobby" style="width:170px">
+        <option value="hacking">Hacking</option>
+        <option value="driving">Driving</option>
+        <option value="trekking">Trekking</option>
+      </select>
+      <br>
+      <br>
+
+      <button type="submit" [disabled]="myForm.invalid">Submit</button>
+      <br>
+
+     </form>
+  </div>
+  <hr>
+
+
+</div>
