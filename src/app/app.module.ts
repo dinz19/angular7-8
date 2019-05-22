@@ -27,6 +27,7 @@ import { TemplateformComponent } from './forms/templateform/templateform.compone
 import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
 import { AnimationComponent } from './animate/animation/animation.component';
 import { RemoteComponent } from './restapi/remote/remote.component';
+import { EmpdetailsComponent } from './restapi/empdetails/empdetails.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { RemoteComponent } from './restapi/remote/remote.component';
     TemplateformComponent,
     ReactiveformComponent,
     AnimationComponent,
-    RemoteComponent
+    RemoteComponent,
+    EmpdetailsComponent
     
   ],
   imports: [
@@ -129,6 +131,10 @@ import { RemoteComponent } from './restapi/remote/remote.component';
       {
         path: 'remote',
         component: RemoteComponent
+      },
+      {
+        path: 'remote/:id',
+        component: EmpdetailsComponent
       },
       {
         path: '**',

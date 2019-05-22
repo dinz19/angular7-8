@@ -1,0 +1,35 @@
+<div>
+  <br>
+
+
+  <br>
+  <table border="border" cellpadding=7> 
+    <tr>
+      <th>
+        ID
+      </th>
+      <th>
+        Emp Name
+      </th>
+      <th>
+        Salary
+      </th>
+      <th>
+        Age
+      </th>
+      
+    
+    </tr>
+  
+    <tr>
+  
+    <tr *ngFor="let u of activeEmp">
+    <td>{{u.id}} </td>
+    <td>{{u.employee_name}}  </td>
+    <td> {{u.employee_salary}}</td>
+    <td> {{u.employee_age}}</td>
+    
+    </tr>
+  </table>
+  
+  </div>

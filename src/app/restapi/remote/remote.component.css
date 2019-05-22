@@ -1,0 +1,29 @@
+
+.formClass{
+    background-color: antiquewhite;
+    width: 400px;
+    height: 200px;
+}
+
+.boxelse{
+    background-color: firebrick;
+    width: 100px;
+    height: 100px;
+    color:white;
+}
+
+
+.nobox{
+    background-color:green;
+    width: 100px;
+    height: 100px;
+    color:wheat
+}
+
+
+.switchCase{
+    background-color:thistle;
+    width: 100px;
+    height: 100px;
+    color:wheat
+}

@@ -10,7 +10,7 @@
 <hr>
 <h3><u>Remote Users:</u> </h3>
 
-<div>
+<!--<div>
 <br>
   <table border="border" cellpadding=7> 
     <tr>
@@ -41,6 +41,96 @@
     <td> {{u.address.geo.lng}}</td>
     </tr>
   </table>
+
+</div>-->
+
+
+
+<div>
+<br>
+<!--<button (click) = "addEmp()">Add Employee</button>-->
+<button (click) = "toggleDiv()">Show Employee Form to Add</button><br>
+ <div class="formClass" *ngIf="!check">
+
+  
+        <br>
+        Employee Form :
+      
+        <br>
+        <br>
+        <form #empform="ngForm" (ngSubmit)="submitDetail(empform)" autocomplete >
+          
+          <label contenteditable="true">
+            Name &nbsp;
+          </label>
+          <input type="text"  name="name" [(ngModel)]="name" minlength="3"  maxlength="10" required autofocus placeholder="Full Name" pattern="[a-zA-z]{3,10}"> {{name}}
+      &nbsp;
+      <!--<span [ngStyle]="{color: empform.controls.FULLNAME.invalid? 'red' : 'white'}" > Minimum Length is 3. Maximum Length is 10 and only alphabets are allowed</span>-->
+        <br>
+        <br>
+          <label>
+            Age &nbsp;&nbsp;&nbsp;&nbsp;
+          </label>
+          <input type="number" name="age" [(ngModel)]="age" placeholder="Age"  required min="18" max="30"> {{age}}
+        
+        <br>
+        <br>
+          <label>
+            Salary 
+          </label>
+      
+          <input type="number" name="salary" [(ngModel)]="salary" placeholder="Salary"  required> {{salary}}
+        <br>
+        <br>
+        <button type="submit" > Add Employee </button>
+        </form>
+        <!--[disabled]="hobbyForm.invalid"-->
+      
+   
+
+</div>
+<div>
+<span> {{msg}}</span>
+
+<table border="border" cellpadding=7> 
+  
+  <tr>
+    <th>
+      ID
+    </th>
+    <th>
+      Emp Name
+    </th>
+    <th>
+      Salary
+    </th>
+    <th>
+      Age
+    </th>
+    <th>
+      Details
+    </th>
+    <th>
+      Delete
+    </th>
+  </tr>
+
+  <tr>
+
+  <tr *ngFor="let u of users">
+  <td>{{u.id}} </td>
+  <td>{{u.employee_name}}  </td>
+  <td> {{u.employee_salary}}</td>
+  <td> {{u.employee_age}}</td>
+  <td>
+    <button (click) = "getEmpById(u.id)">Details</button>
+  </td>
+  <td>
+    <button (click) = "deleteEmpById(u.id)">Delete</button>
+  </td>
+  </tr>
+</table>
+</div>
 
 </div>
 
