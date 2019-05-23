@@ -17,7 +17,7 @@ export class RemoteComponent implements OnInit {
   
   check : boolean = true;
   checkElse : boolean = true;
-  
+      
   toggleDiv = function(){
   this.check = !this.check ? true:false;
   }
@@ -52,7 +52,7 @@ export class RemoteComponent implements OnInit {
         this.restapi.getEmpById(id).subscribe(
          response => {
            /*console.log(response);
-           this.users = response;
+           this.users = response; 
            console.log(this.users)*/
            console.log(id);
 
@@ -104,7 +104,7 @@ export class RemoteComponent implements OnInit {
 
 
   submitDetail = function(empForm){
-   // this.check = false;
+    this.check = false;
     console.log(empForm.value);
     this.emp = empForm.value
    // console.log(this.emp);

@@ -49,10 +49,9 @@
 <div>
 <br>
 <!--<button (click) = "addEmp()">Add Employee</button>-->
-<button (click) = "toggleDiv()">Show Employee Form to Add</button><br>
+<button  class = "show" (click) = "toggleDiv()">Show Employee Form to Add</button><br>
  <div class="formClass" *ngIf="!check">
-
-  
+ 
         <br>
         Employee Form :
       
@@ -82,7 +81,7 @@
           <input type="number" name="salary" [(ngModel)]="salary" placeholder="Salary"  required> {{salary}}
         <br>
         <br>
-        <button type="submit" > Add Employee </button>
+        <button  class = "add" type="submit" > Add Employee </button>
         </form>
         <!--[disabled]="hobbyForm.invalid"-->
       
@@ -92,7 +91,7 @@
 <div>
 <span> {{msg}}</span>
 
-<table border="border" cellpadding=7> 
+<table border="border" cellpadding=7 > 
   
   <tr>
     <th>
@@ -123,10 +122,10 @@
   <td> {{u.employee_salary}}</td>
   <td> {{u.employee_age}}</td>
   <td>
-    <button (click) = "getEmpById(u.id)">Details</button>
+    <button class = "details" (click) = "getEmpById(u.id)">Details</button>
   </td>
   <td>
-    <button (click) = "deleteEmpById(u.id)">Delete</button>
+    <button  class = "delete"  (click) = "deleteEmpById(u.id)">Delete</button>
   </td>
   </tr>
 </table>

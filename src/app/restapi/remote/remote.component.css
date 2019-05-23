@@ -3,6 +3,7 @@
     background-color: antiquewhite;
     width: 400px;
     height: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .boxelse{
@@ -27,3 +28,42 @@
     height: 100px;
     color:wheat
 }
+table{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+tr{
+    background-color: darkseagreen
+}
+td{
+    background-color: darkcyan;
+    color: whitesmoke;
+   
+}
+ .add{
+    background-color: greenyellow;
+    font-size: 15px;
+}
+ .delete{
+    background-color: crimson;
+    color: rgb(235, 217, 217);
+    font-size: 12px;
+    
+}
+ .show{
+    background-color: cornflowerblue;
+    color:white;
+    font-size: 15px;
+}
+ .details{
+    background-color: yellow;
+    color:black;
+    font-size: 12px;
+}
+
+span{
+    background-color: forestgreen;
+    color:white;
+    width:50px;
+    height:30px;
+    font-size: 25px;
+    }
